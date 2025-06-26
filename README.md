@@ -38,7 +38,7 @@ appropriately spent shipping costs based on the Order Priority? Explain your ans
 This section includes basic code snippets, SQL queries, I used during the analysis process.
 
 ### SQL QUERIES AND ANSWERS 
-- To get Which product category had the highest sales, run the below query.
+- ### To get Which product category had the highest sales, run the below query.
   - The result given is "Technology Category"
 
   ```` Sql
@@ -53,7 +53,7 @@ This section includes basic code snippets, SQL queries, I used during the analys
     Total_Sales DESC
   ````
 
-- To get the Top 3 and Bottom 3 regions in terms of sales, run the below query.
+- ### To get the Top 3 and Bottom 3 regions in terms of sales, run the below query.
   - Top 3 region are "West, Ontario, Prarie"
   - Bottom 3 region are "Nunavut, Northwest Territories, Yukon"
 
@@ -72,7 +72,7 @@ GROUP BY Region
 order by total_sales ASC
 ````
 
-- To get the total sales of appliances in Ontario, run the below query.
+- ### To get the total sales of appliances in Ontario, run the below query.
   - The result given is "202346.840"
 
 ```` Sql
@@ -84,7 +84,7 @@ GROUP BY Region,Product_Sub_Category
 order by total_sales
 ````
 
-- KMS incurred the most shipping cost using which shipping method, run the below query.
+- ### KMS incurred the most shipping cost using which shipping method, run the below query.
   - The result given is "Delivery Truck"
 
 ```` Sql
@@ -95,7 +95,7 @@ group by ship_mode
 order by total_cost desc
 ````
 
-- To get the most valuable customers, and the products or services they typicall purchase, run the below query.
+- ### To get the most valuable customers, and the products or services they typicall purchase, run the below query.
 
 ```` sql
   select top 10
@@ -104,7 +104,7 @@ from [dbo].[KMS Sql Case Study]
 group by Customer_Name, product_Name
 order by total_profit desc
 ````
-- The result given:
+- ### The result given:
   - Top Valuable Customers and Their Most Purchased Products
     
 | Customer Name       | Most Profitable Product                                                                          | Total Profit |
@@ -119,3 +119,28 @@ order by total_profit desc
 | Logan Haushalter    | Hewlett Packard LaserJet 3310 Copier                                                             | 11,630.00    |
 | Nick Crebassa       | HP Business Color Inkjet 3000 [N, DTN] Series Printers                                           | 11,562.00    |
 | John Stevenson      | Fellowes PB500 Electric Punch Plastic Comb Binding Machine with Manual Bind                      | 11,535.00    |
+
+
+- ### To get Which small business customer had the highest sales, run the below query.
+  - The result given is "Dennis Kane"
+
+````sql
+  select top 1
+customer_name, customer_segment, sum(sales) as highest_sales
+from[dbo].[KMS Sql Case Study]
+where customer_segment='Small business'
+group by customer_name,customer_segment
+order by highest_sales desc
+```` 
+
+
+
+
+
+
+
+
+
+
+
+
