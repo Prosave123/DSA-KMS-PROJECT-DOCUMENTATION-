@@ -9,3 +9,18 @@ This report breaks down KMS's performance based on sales, customers, and shippin
 ### Data Source
 The analysis in this project draws from two key datasets—“KMS SQL Case Study.csv” and “Orders_Status.csv”—which were obtained through the DSA LMS Dashboard. These datasets serve as the foundation for uncovering insights into sales performance, customer behavior, and order management.
 
+### TOOL USED
+- SQL Server(Utilized for querying and data analysis) [Download here](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+
+
+
+
+
+
+
+
+
+
+
+
+
