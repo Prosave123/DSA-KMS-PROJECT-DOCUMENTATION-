@@ -12,6 +12,12 @@ The analysis in this project draws from two key datasets—“KMS SQL Case Study
 ### TOOL USED
 - SQL Server(Utilized for querying and data analysis) [Download here](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 
+### Data cleaning and Preparation
+During the initial phase of data preparation, the following steps are carried out:  
+1. Loading and inspecting the dataset  
+2. Identifying and addressing missing values  
+3. Cleaning and formatting the data for analysis  
+
 
 
 
