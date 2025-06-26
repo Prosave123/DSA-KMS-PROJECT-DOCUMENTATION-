@@ -83,3 +83,18 @@ WHERE REGION = 'ONTARIO'and Product_Sub_Category='Appliances'
 GROUP BY Region,Product_Sub_Category
 order by total_sales
 ````
+
+- KMS incurred the most shipping cost using which shipping method, run the below query.
+  - The result given is "Delivery Truck"
+
+```` Sql
+  select 
+ship_mode,sum (shipping_cost)as total_cost
+from [dbo].[KMS Sql Case Study]
+group by ship_mode
+order by total_cost desc
+````
+
+
+
+
